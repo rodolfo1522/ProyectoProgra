@@ -3,9 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Conexion;
+
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.FileSystems;
+import java.nio.file.FileSystems; // para establecer la coneccion
 import java.nio.file.Files;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,7 +20,7 @@ public class Conexion {
 
     // Constructor que carga los datos de la conexión desde el archivo properties
     public Conexion() {
-        try (InputStream in = Files.newInputStream(FileSystems.getDefault().getPath("C:\\Users\\hecto\\OneDrive\\Documentos\\NetBeansProjects\\proyectoProgra2\\src\\main\\java\\Confi\\config.properties"))) {
+        try (InputStream in = Files.newInputStream(FileSystems.getDefault().getPath("C:\\Users\\hecto\\OneDrive\\Documentos\\NetBeansProjects\\ProyectoHotel\\src\\main\\java\\db.properties"))) {
             Properties props = new Properties();
             props.load(in);
             
@@ -47,7 +48,7 @@ public class Conexion {
         return conn;
     }
 
-    // Método para cerrar la conexión
+    // Método para cerrar la conexión c
     public void closeConnection() {
         if (conn != null) {
             try {
