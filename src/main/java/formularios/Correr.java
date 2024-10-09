@@ -12,12 +12,13 @@ import java.sql.Connection;
 
 /**
  *
- * @author hecto
+ * @author Hector Lopez
  */
 public class Correr extends javax.swing.JFrame {
-Connection conn = null;
+    Connection conn = null;
     Conexion Conect = new Conexion();
     String qry = "";
+    
     /**
      * Creates new form Correr
      */
@@ -34,6 +35,8 @@ Connection conn = null;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtusuario = new javax.swing.JTextField();
         btnlogin = new javax.swing.JButton();
@@ -41,9 +44,10 @@ Connection conn = null;
         jLabel4 = new javax.swing.JLabel();
         txtrol = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("User");
 
         jLabel2.setText("Pasword");
 
@@ -63,55 +67,58 @@ Connection conn = null;
             }
         });
 
-        jLabel1.setText("User");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 428, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtrol, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(btnlogin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
+                .addGap(80, 80, 80))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(100, 100, 100)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(btnlogin)
-                            .addGap(79, 79, 79)
-                            .addComponent(jButton1))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(45, 45, 45)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtrol, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(101, Short.MAX_VALUE)))
+                    .addGap(124, 124, 124)
+                    .addComponent(jLabel5)
+                    .addContainerGap(229, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtrol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(btnlogin))
+                .addGap(59, 59, 59))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(77, 77, 77)
-                    .addComponent(jLabel1)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(17, 17, 17)
-                    .addComponent(jLabel2)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addComponent(jLabel4)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(txtrol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(26, 26, 26)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1)
-                        .addComponent(btnlogin))
-                    .addContainerGap(77, Short.MAX_VALUE)))
+                    .addGap(48, 48, 48)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(100, Short.MAX_VALUE)))
         );
 
         pack();
@@ -120,51 +127,55 @@ Connection conn = null;
     private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
         // TODO add your handling code here:
         // validar usuario
-        try {
-            conn = Conect.getConnection();
+      try {
+    conn = Conect.getConnection();
 
-            String qry = "SELECT rol FROM usuario WHERE nombre = ? AND contrasena = ?";
+   String qry = "SELECT rol FROM usuario WHERE nombre = ? AND contrasena = ?";
 
-            PreparedStatement pr = conn.prepareStatement(qry);
-            pr.setString(1, txtusuario.getText());
-            pr.setString(2, txtcontra.getText());
+PreparedStatement pr = conn.prepareStatement(qry);
+pr.setString(1, txtusuario.getText());
+pr.setString(2, txtcontra.getText());
 
-            ResultSet rs = pr.executeQuery();
+ResultSet rs = pr.executeQuery();
 
-            if (rs.next()) { // Verifica si hay un resultado
-                int rol = rs.getInt("rol"); // Obtiene el rol del usuario
+if (rs.next()) { // Verifica si hay un resultado
+    int rol = rs.getInt("rol"); // Obtiene el rol del usuario
 
-                // Lógica para manejar el rol
-                if (rol == 0) { // Rol 0 es Empleado
-                    JOptionPane.showMessageDialog(null, "¡Hola! Bienvenido, estimado Empleado 😊 : " + txtusuario.getText());
-                    MenuEmpleado menux = new MenuEmpleado();
-                    menux.setVisible(true);
-                } else if (rol == 1) { // Rol 1 es Administrador
-                    JOptionPane.showMessageDialog(null, "¡Hola! Bienvenido, distinguido Administrador 😊 : " + txtusuario.getText());
-                    MenuAdministrador menu2 = new MenuAdministrador();
-                    menu2.setVisible(true);
-                }
+    // Lógica para manejar el rol
+    if (rol == 0) { // Rol 0 es Empleado
+        JOptionPane.showMessageDialog(null, "¡Hola! Bienvenido, estimado Empleado 😊 : " + txtusuario.getText());
+        MenuEmpleado menux = new MenuEmpleado();
+        menux.setVisible(true);
+    } else if (rol == 1) { // Rol 1 es Administrador
+        JOptionPane.showMessageDialog(null, "¡Hola! Bienvenido, distinguido Administrador 😊 : " + txtusuario.getText());
+        MenuAdministrador menu2 = new MenuAdministrador();
+        menu2.setVisible(true);
+    }
 
-                this.dispose(); // Cierra la ventana actual
-            } else {
-                JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
-                System.out.println("Usuario: " + txtusuario.getText());
-                System.out.println("Contraseña: " + txtcontra.getText());
-            }
+    this.dispose(); // Cierra la ventana actual
+} else {
+    JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos");
+    System.out.println("Usuario: " + txtusuario.getText());
+    System.out.println("Contraseña: " + txtcontra.getText());
+}
 
-            rs.close();
-            pr.close();
-        } catch (SQLException sqle) {
-            sqle.printStackTrace();
-        } finally {
-            try {
-                if (conn != null && !conn.isClosed()) {
-                    conn.close();
-                }
-            } catch (SQLException sqle) {
-                sqle.printStackTrace();
-            }
+    rs.close();
+    pr.close();
+} catch (SQLException sqle) {
+    sqle.printStackTrace();
+} finally {
+    try {
+        if (conn != null && !conn.isClosed()) {
+            conn.close();
         }
+    } catch (SQLException sqle) {
+        sqle.printStackTrace();
+    }
+}
+
+
+
+
 
     }//GEN-LAST:event_btnloginActionPerformed
 
@@ -214,6 +225,7 @@ Connection conn = null;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField txtcontra;
     private javax.swing.JTextField txtrol;
     private javax.swing.JTextField txtusuario;

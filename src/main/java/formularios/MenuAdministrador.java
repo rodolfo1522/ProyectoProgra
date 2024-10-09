@@ -6,12 +6,12 @@ package formularios;
 
 /**
  *
- * @author hecto
+ * @author Hector Lopez
  */
 public class MenuAdministrador extends javax.swing.JFrame {
-
+        int rol = 1;
     /**
-     * Creates new form MenuAdministrador
+         * Creates new form MenuAdministrador
      */
     public MenuAdministrador() {
         initComponents();
@@ -29,6 +29,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         detokAD = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
@@ -46,14 +47,19 @@ public class MenuAdministrador extends javax.swing.JFrame {
         detokAD.setLayout(detokADLayout);
         detokADLayout.setHorizontalGroup(
             detokADLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 503, Short.MAX_VALUE)
+            .addGap(0, 588, Short.MAX_VALUE)
         );
         detokADLayout.setVerticalGroup(
             detokADLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 407, Short.MAX_VALUE)
+            .addGap(0, 388, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Opcion");
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem4.setText("Salir");
+        jMenu1.add(jMenuItem4);
+
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Cliente");
@@ -131,7 +137,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(detokAD)
+            .addComponent(detokAD, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -139,28 +145,35 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        Clientes client = new Clientes();
+         Clientes client = new Clientes();
         detokAD.add(client);
         client.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+         provedor prov = new provedor();
+        detokAD.add(prov);
+        prov.show();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu3ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        provedor prov = new provedor();
-        detokAD.add(prov);
-        prov.show();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        Ventas vent = new Ventas();
+         Ventas vent = new Ventas();
         detokAD.add(vent);
         vent.show();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+         RRHH rrhh = new RRHH();
+        detokAD.add(rrhh);
+        rrhh.show();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -168,13 +181,6 @@ public class MenuAdministrador extends javax.swing.JFrame {
         detokAD.add(fin);
         fin.show();
     }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-        RRHH rrhh = new RRHH();
-        detokAD.add(rrhh);
-        rrhh.show();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,6 +229,7 @@ public class MenuAdministrador extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables

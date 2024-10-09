@@ -6,10 +6,10 @@ package formularios;
 
 /**
  *
- * @author hecto
+ * @author Hector Lopez
  */
 public class MenuEmpleado extends javax.swing.JFrame {
-
+int rol = 0;
     /**
      * Creates new form MenuEmpleado
      */
@@ -40,11 +40,11 @@ public class MenuEmpleado extends javax.swing.JFrame {
         detokEm.setLayout(detokEmLayout);
         detokEmLayout.setHorizontalGroup(
             detokEmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 542, Short.MAX_VALUE)
+            .addGap(0, 588, Short.MAX_VALUE)
         );
         detokEmLayout.setVerticalGroup(
             detokEmLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 385, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Opcion");
@@ -90,20 +90,21 @@ public class MenuEmpleado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        provedor prov = new provedor();
-        detokEm.add(prov);
-        prov.show();
-
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         Clientes client = new Clientes();
         detokEm.add(client);
         client.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        provedor prov = new provedor();
+        detokEm.add(prov);
+        prov.show();
+        
+        
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 /**
  *
- * @author hecto
+ * @author hector
  */
 public class Clientes extends javax.swing.JInternalFrame {
 Connection conn = null;
@@ -35,10 +35,10 @@ Connection conn = null;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        BtnGuardar = new javax.swing.JButton();
+        BtnModificar = new javax.swing.JButton();
+        BtnEliminar = new javax.swing.JButton();
+        BtnConsultar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txthoraS = new javax.swing.JTextField();
@@ -58,38 +58,36 @@ Connection conn = null;
         jLabel5 = new javax.swing.JLabel();
         txttelefono = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        txtCV = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jButton1.setText("Guardar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnGuardar.setText("Guardar");
+        BtnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnGuardarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Moficar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BtnModificar.setText("Modificar");
+        BtnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BtnModificarActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Eliminar ");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BtnEliminar.setText("Eliminar ");
+        BtnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BtnEliminarActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Consultar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BtnConsultar.setText("Consultar");
+        BtnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BtnConsultarActionPerformed(evt);
             }
         });
 
@@ -128,8 +126,6 @@ Connection conn = null;
 
         jLabel8.setText("Hora de salida:");
 
-        jLabel11.setText("Codigo validacion");
-
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
@@ -142,12 +138,10 @@ Connection conn = null;
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 190, Short.MAX_VALUE)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(172, 172, 172))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(210, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -165,7 +159,7 @@ Connection conn = null;
                                         .addComponent(txtnombre)
                                         .addComponent(txtciudad)
                                         .addComponent(comboHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -185,39 +179,39 @@ Connection conn = null;
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txthoraS, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txthoraS, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(55, 55, 55))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(33, 33, 33)
-                                .addComponent(jButton2)
-                                .addGap(30, 30, 30)
-                                .addComponent(jButton3)
-                                .addGap(35, 35, 35)
-                                .addComponent(jButton4))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(22, 22, 22)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(8, 8, 8)
-                                        .addComponent(txtCV, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(164, 164, 164)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(BtnGuardar)
+                        .addGap(33, 33, 33)
+                        .addComponent(BtnModificar)
+                        .addGap(30, 30, 30)
+                        .addComponent(BtnEliminar)
+                        .addGap(35, 35, 35)
+                        .addComponent(BtnConsultar)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {BtnConsultar, BtnEliminar, BtnGuardar, BtnModificar});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jLabel10)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(txtCV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
@@ -243,18 +237,16 @@ Connection conn = null;
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
                         .addComponent(txthoraD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26)
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addGap(71, 71, 71))
+                    .addComponent(BtnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(80, 80, 80))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {BtnConsultar, BtnEliminar, BtnGuardar, BtnModificar});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -267,28 +259,37 @@ Connection conn = null;
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcodigoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
         // TODO add your handling code here: guardar de
       try {
     conn = Conect.getConnection();
     if (conn != null) {
         // Consulta SQL ajustada para incluir el campo 'codigo'
-        qry = "INSERT INTO cliente(codigo, nombre, apellido, ciudad, pais, telefono, hora_d, hora_s, huesped_tipo) VALUES (?,?,?,?,?,?,?,?,?)";
+        qry = "INSERT INTO cliente(nombre, apellido, ciudad, pais, telefono, hora_d, hora_s, huesped_tipo) VALUES (?,?,?,?,?,?,?,?)";
         PreparedStatement pr = conn.prepareStatement(qry);
         
-        // Asigna el valor de 'codigo' desde un campo de texto
-        pr.setInt(1, Integer.parseInt(txtCV.getText())); // Campo para 'codigo'
-        pr.setString(2, txtnombre.getText());
-        pr.setString(3, txtapellido.getText());
-        pr.setString(4, txtciudad.getText());
-        pr.setString(5, txtpais.getText());
-        pr.setString(6, txttelefono.getText());
-        pr.setString(7, txthoraD.getText()); // Se corresponde con 'hora_d' en la tabla
-        pr.setString(8, txthoraS.getText()); // Se corresponde con 'hora_s' en la tabla
-        pr.setString(9, comboHuesped.getSelectedItem().toString()); // Se corresponde con 'huesped_tipo' en la tabla
+        // Asigna los valores
+        pr.setString(1, txtnombre.getText());
+        pr.setString(2, txtapellido.getText());
+        pr.setString(3, txtciudad.getText());
+        pr.setString(4, txtpais.getText());
+        pr.setString(5, txttelefono.getText());
+        pr.setString(6, txthoraD.getText()); // Se corresponde con 'hora_d' en la tabla
+        pr.setString(7, txthoraS.getText()); // Se corresponde con 'hora_s' en la tabla
+        pr.setString(8, comboHuesped.getSelectedItem().toString()); // Se corresponde con 'huesped_tipo' en la tabla
 
         pr.executeUpdate();
         JOptionPane.showMessageDialog(null, "Su reservación ha sido registrada, tenga un feliz día =)");
+        
+        //Limpiar campos
+        txtnombre.setText("");
+        txtapellido.setText("");
+        txtciudad.setText("");
+        txtpais.setText("");
+        txttelefono.setText("");
+        txthoraD.setText("");
+        txthoraS.setText("");
+        comboHuesped.setSelectedIndex(0);
     }
 } catch (SQLException sqle) {
     System.out.println(sqle.getMessage());
@@ -304,9 +305,9 @@ Connection conn = null;
 
 
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnGuardarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BtnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificarActionPerformed
         // TODO add your handling code here: modificar
         try {
     conn = Conect.getConnection();  // Asegúrate de que Conect.getConnection() funcione con Oracle
@@ -315,12 +316,12 @@ Connection conn = null;
     if (conn != null && codValue.charAt(0) != '/') {
         // Query para actualizar los datos en la tabla 'cliente'
         qry = "UPDATE cliente SET nombre=?, apellido=?, ciudad=?, pais=?, telefono=?, "
-            + "hora_d=?, hora_s=?, huesped_tipo=? WHERE codigo=?";  // Asegúrate de tener una columna 'codigo' o un identificador único
+            + "hora_d=?, hora_s=?, huesped_tipo=? WHERE codigo=?";  
         
         // Preparamos el query
         PreparedStatement pr = conn.prepareStatement(qry);
         
-        // Asignamos los valores a los placeholders de la query
+        // Asignamos los valores
         pr.setString(1, txtnombre.getText());
         pr.setString(2, txtapellido.getText());
         pr.setString(3, txtciudad.getText());
@@ -342,6 +343,17 @@ Connection conn = null;
         
         // Mostramos mensaje de confirmación
         JOptionPane.showMessageDialog(null, "Los datos del cliente han sido actualizados exitosamente.");
+        
+         // Limpieza de todos los campos
+        txtnombre.setText("");
+        txtapellido.setText("");
+        txtciudad.setText("");
+        txtpais.setText("");
+        txttelefono.setText("");
+        txthoraD.setText("");
+        txthoraS.setText("");
+        comboHuesped.setSelectedIndex(0); // Restablecer ComboBox al primer valor
+        txtcodigo.setText(""); // Limpia el campo del ID o código
     }
 } catch (SQLException sqle) {
     // Manejamos cualquier error en SQL
@@ -355,12 +367,12 @@ Connection conn = null;
     }
 }
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BtnModificarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminarActionPerformed
         // TODO add your handling code here: eliminiar 
         try {
-    conn = Conect.getConnection();  // Asegúrate de que Conect.getConnection() funcione con Oracle
+    conn = Conect.getConnection();  
     String codValue = txtcodigo.getText();
     
     // Verificamos si la conexión es válida y si el código no empieza con '/'
@@ -396,13 +408,13 @@ Connection conn = null;
     }
 }
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BtnEliminarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BtnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsultarActionPerformed
         // TODO add your handling code here:consultar
         try {
-    conn = Conect.getConnection();  // Asegúrate de que Conect.getConnection() funcione con Oracle
-    String sql = "SELECT * FROM cliente WHERE codigo=?";  // Asegúrate de que 'codigo' sea la columna correcta para identificar al cliente
+    conn = Conect.getConnection();  
+    String sql = "SELECT * FROM cliente WHERE codigo=?";  
     PreparedStatement pst = conn.prepareStatement(sql);
     
     // Asignamos el valor del código que se debe consultar
@@ -440,21 +452,20 @@ Connection conn = null;
 }
 
         
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BtnConsultarActionPerformed
 
     /**
      * @param args the command line arguments
      */
  
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnConsultar;
+    private javax.swing.JButton BtnEliminar;
+    private javax.swing.JButton BtnGuardar;
+    private javax.swing.JButton BtnModificar;
     private javax.swing.JComboBox<String> comboHuesped;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -465,7 +476,6 @@ Connection conn = null;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JTextField txtCV;
     private javax.swing.JTextField txtapellido;
     private javax.swing.JTextField txtciudad;
     private javax.swing.JTextField txtcodigo;
